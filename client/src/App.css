@@ -36,16 +36,22 @@ nav a {
   color: #66FCF1;
 }
 
+.App {
+  background-color: #1F2833;
+}
+
+h1 {
+  color: #66FCF1;
+}
+
 .landing {
   /* background-color: #0B0C10; */
   position: relative;
-  background-color: #1F2833;
   background-size: cover;
   background-position: center;
   height: 100vh;
   margin-top: -24px;
   margin-bottom: -50px;
-  color: #66FCF1;
 }
 
 .landing p {

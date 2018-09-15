@@ -9,3 +9,7 @@ routes/api/posts.js
            users.js
 validation/register.js
            is-empty.js
+
+# 9/15/18
+routes/api/users.js
+validation/login.js

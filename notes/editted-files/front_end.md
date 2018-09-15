@@ -4,5 +4,36 @@ public/index.html
 src/App.css
     App.js
 src/components/layout/Navbar.js
-src/components/layout/Landing.js
-src/components/layout/Footer.js
+                      Landing.js
+
+# 9/11/18
+package.json
+src/App.css
+    App.js
+src/components/layout/Navbar.js
+                      Landing.js
+                      Footer.js
+src/components/auth/Register.js
+
+# 9/12/18
+src/components/auth/Register.js
+src/App.js
+    store.js
+src/reducers/index.js
+
+# 9/13/18
+src/reducers/authReducer.js
+             errorReducer.js
+             index.js
+src/actions/authActions.js
+            types.js
+src/components/auth/Register.js
+
+# 9/14/18
+src/App.css
+    App.js
+src/components/auth/Login.js
+src/actions/authActions.js
+
+# 9/15/18
+src/components/auth/Login.js
