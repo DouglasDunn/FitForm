@@ -49,3 +49,5 @@ src/validation/is-empty.js
 src/App.js
    /App.css
 src/components/dashboard/Dashboard.js
+src/components/layout/Navbar.js
+src/actions/authActions.js
