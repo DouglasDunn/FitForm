@@ -44,3 +44,8 @@ src/actions/authActions.js
 src/utils/setAuthToken.js
 src/reducers/authReducer.js
 src/validation/is-empty.js
+
+# 9/16/18
+src/App.js
+   /App.css
+src/components/dashboard/Dashboard.js

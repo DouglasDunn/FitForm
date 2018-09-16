@@ -22,3 +22,8 @@
 
 # 9/15/18
 (X) Create a fully functional login page
+
+# 9/16/18
+(X) Fix auth.user state so that logged in user's auth.user data will stay assigned until user logs out or token expires
+() Create logout functionality and conditional navbar links based on whether or not the user is logged in or out
+() Create a create profile page
