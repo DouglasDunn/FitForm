@@ -21,4 +21,4 @@
 (X) Create a fully functional registration page
 
 # 9/15/18
-() Create a fully functional login page
+(X) Create a fully functional login page

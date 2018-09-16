@@ -34,6 +34,13 @@ src/App.css
     App.js
 src/components/auth/Login.js
 src/actions/authActions.js
+src/reducers/authReducer.js
+             index.js
 
 # 9/15/18
 src/components/auth/Login.js
+src/actions/authActions.js
+            types.js
+src/utils/setAuthToken.js
+src/reducers/authReducer.js
+src/validation/is-empty.js

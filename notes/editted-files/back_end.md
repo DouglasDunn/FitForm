@@ -13,3 +13,6 @@ validation/register.js
 # 9/15/18
 routes/api/users.js
 validation/login.js
+server.js
+config/keys.js
+       passport.js
