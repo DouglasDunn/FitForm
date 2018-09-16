@@ -50,4 +50,8 @@ src/App.js
    /App.css
 src/components/dashboard/Dashboard.js
 src/components/layout/Navbar.js
+                      Landing.js
+src/components/auth/Register.js
+                    Login.js
 src/actions/authActions.js
+src/component/common/TectFieldGroup.js

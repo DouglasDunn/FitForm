@@ -26,4 +26,6 @@
 # 9/16/18
 (X) Fix auth.user state so that logged in user's auth.user data will stay assigned until user logs out or token expires
 (X) Create logout functionality, conditional navbar links based on whether or not the user is logged in or out, and log the user out when token expires
+(X) Create a component for the input field
+
 () Create a create profile page
