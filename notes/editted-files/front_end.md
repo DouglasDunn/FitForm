@@ -60,3 +60,6 @@ src/components/create-profile/CreateProfile.js
 # 9/17/18
 src/components/common/SelectListGroup.js
 src/components/create-profile/CreateProfile.js
+
+# 9/18/18
+src/components/create-profile/CreateProfile.js

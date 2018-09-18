@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextFieldGroup from '../common/TextFieldGroup';
 import SelectListGroup from '../common/SelectListGroup';
+import { createProfile } from '../../actions/profileActions';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -17,6 +18,23 @@ class CreateProfile extends Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    const profileData = {
+      gender: this.state.gender,
+      age: this.state.age,
+      weightInPounds: this.state.weightInPounds,
+      feet: this.state.feet,
+      inches: this.state.inches,
+      goalWeightInPounds: this.state.goalWeightInPounds,
+      goalDate: this.state.goalDate
+    }
+
+    this.props.createProfile(profileData);
   }
 
   onChange(e) {
@@ -66,7 +84,7 @@ class CreateProfile extends Component {
                 We will get some information to make your profile stand out
               </p>
               <small className="d-block pb-3">* = required fields</small>
-              <form>
+              <form onSubmit={this.onSubmit}>
                 <SelectListGroup
                   placeholder="Gender"
                   name="gender"
@@ -117,7 +135,11 @@ class CreateProfile extends Component {
                   type="date"
                   value={this.state.from}
                   onChange={this.onChange}
-                  error={errors.from}
+                />
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-info btn-block mt-4"
                 />
               </form>
             </div>

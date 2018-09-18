@@ -30,4 +30,8 @@
 
 # 9/17/18
 (X) Create a component for the select element for the drop-down list.
-() Create a create profile page.
+() Create a create-profile page react component on the front end.
+
+# 9/18/18
+(X) Create a create-profile page react component on the front end.
+() Create the back end for the create-profile component
