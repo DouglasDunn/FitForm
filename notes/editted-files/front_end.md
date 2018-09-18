@@ -54,4 +54,9 @@ src/components/layout/Navbar.js
 src/components/auth/Register.js
                     Login.js
 src/actions/authActions.js
-src/component/common/TectFieldGroup.js
+src/component/common/TextFieldGroup.js
+src/components/create-profile/CreateProfile.js
+
+# 9/17/18
+src/components/common/SelectListGroup.js
+src/components/create-profile/CreateProfile.js

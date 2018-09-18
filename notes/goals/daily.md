@@ -28,4 +28,6 @@
 (X) Create logout functionality, conditional navbar links based on whether or not the user is logged in or out, and log the user out when token expires
 (X) Create a component for the input field
 
-() Create a create profile page
+# 9/17/18
+(X) Create a component for the select element for the drop-down list.
+() Create a create profile page.
