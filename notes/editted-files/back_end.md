@@ -16,3 +16,15 @@ validation/login.js
 server.js
 config/keys.js
        passport.js
+
+# 9/19/18
+models/Profile.js
+routes/api/profile.js
+
+# 9/20/18
+routes/api/profile.js
+validation/profile.js
+
+# 9/21/18
+validation/profile.js
+routes/api/profile.js

@@ -63,3 +63,6 @@ src/components/create-profile/CreateProfile.js
 
 # 9/18/18
 src/components/create-profile/CreateProfile.js
+src/actions/profileActions.js
+
+# 9/19/18

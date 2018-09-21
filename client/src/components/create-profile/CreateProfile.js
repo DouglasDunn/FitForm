@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextFieldGroup from '../common/TextFieldGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from '../../actions/profileActions';
+import axios from 'axios';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -34,7 +35,8 @@ class CreateProfile extends Component {
       goalDate: this.state.goalDate
     }
 
-    this.props.createProfile(profileData);
+    axios
+      .post('/api/profile', profileData);
   }
 
   onChange(e) {

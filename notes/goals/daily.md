@@ -35,3 +35,12 @@
 # 9/18/18
 (X) Create a create-profile page react component on the front end.
 () Create the back end for the create-profile component
+
+# 9/19/18
+() Create the back end for the create-profile component
+
+# 9/20/18
+() Create the back end for the create-profile component
+
+# 9/21/18
+(X) Create the back end for the create-profile component
