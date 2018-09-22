@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from '../../actions/profileActions';
-import axios from 'axios';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -22,6 +24,12 @@ class CreateProfile extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
+  }
+
   onSubmit(e) {
     e.preventDefault();
 
@@ -35,8 +43,7 @@ class CreateProfile extends Component {
       goalDate: this.state.goalDate
     }
 
-    axios
-      .post('/api/profile', profileData);
+    this.props.createProfile(profileData, this.props.history);
   }
 
   onChange(e) {
@@ -44,6 +51,7 @@ class CreateProfile extends Component {
   }
 
   render() {
+    const { errors } = this.state;
 
     // Select options for gender, feet, inches
     const genderOptions = [
@@ -93,6 +101,7 @@ class CreateProfile extends Component {
                   value={this.state.gender}
                   onChange={this.onChange}
                   options={genderOptions}
+                  error={errors.gender}
                   info="Input in your gender"
                 />
                 <TextFieldGroup
@@ -100,6 +109,7 @@ class CreateProfile extends Component {
                   name="age"
                   value={this.state.age}
                   onChange={this.onChange}
+                  error={errors.age}
                   info="Input in your age"
                 />
                 <TextFieldGroup
@@ -107,6 +117,7 @@ class CreateProfile extends Component {
                   name="weightInPounds"
                   value={this.state.weightInPounds}
                   onChange={this.onChange}
+                  error={errors.weightInPounds}
                   info="Input in your weight in pounds"
                 />
                 <SelectListGroup
@@ -115,6 +126,7 @@ class CreateProfile extends Component {
                   value={this.state.feet}
                   onChange={this.onChange}
                   options={feetOptions}
+                  error={errors.feet}
                   info="Input in your feet"
                 />
                 <SelectListGroup
@@ -123,6 +135,7 @@ class CreateProfile extends Component {
                   value={this.state.inches}
                   onChange={this.onChange}
                   options={inchesOptions}
+                  error={errors.inches}
                   info="Input in your inches"
                 />
                 <TextFieldGroup
@@ -130,13 +143,16 @@ class CreateProfile extends Component {
                   name="goalWeightInPounds"
                   value={this.state.goalWeightInPounds}
                   onChange={this.onChange}
+                  error={errors.goalWeightInPounds}
                   info="Input in your goal weight in pounds"
                 />
                 <TextFieldGroup
                   name="goalDate"
                   type="date"
-                  value={this.state.from}
+                  value={this.state.goalDate}
                   onChange={this.onChange}
+                  error={errors.goalDate}
+                  info="Input in your goal date"
                 />
                 <input
                   type="submit"
@@ -152,4 +168,16 @@ class CreateProfile extends Component {
   }
 }
 
-export default CreateProfile;
+CreateProfile.propTypes = {
+  profile: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  profile: state.profile,
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { createProfile })(
+  withRouter(CreateProfile)
+);

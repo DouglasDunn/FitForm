@@ -44,3 +44,8 @@
 
 # 9/21/18
 (X) Create the back end for the create-profile component
+() Create the redux for create-profile
+
+# 9/22/18
+(X) Create the redux for create-profile
+() Create private routes for logged in users.
