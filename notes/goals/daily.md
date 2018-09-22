@@ -48,4 +48,5 @@
 
 # 9/22/18
 (X) Create the redux for create-profile
-() Create private routes for logged in users.
+(X) Create private routes for logged in users.
+() Show the user's profile in the dashboard

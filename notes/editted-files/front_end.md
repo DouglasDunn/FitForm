@@ -74,3 +74,5 @@ src/components/create-profile/CreateProfile.js
 
 # 9/22/18
 src/components/create-profile/CreateProfile.js
+src/components/common/PrivateRoute.js
+src/App.js
