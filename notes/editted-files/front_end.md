@@ -91,3 +91,4 @@ src/components/common/spinner.gif
 src/reducers/profileReducer.js
 src/App.js
 src/components/layout/Navbar.js
+src/components/create-profile/CreateProfile.js

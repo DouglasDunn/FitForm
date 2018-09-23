@@ -53,6 +53,7 @@ router.post(
     // Get fields
     const profileFields = {};
     profileFields.user = req.user.id;
+    if (req.body.username) profileFields.username = req.body.username;
     if (req.body.gender) profileFields.gender = req.body.gender;
     if (req.body.age) profileFields.age = req.body.age;
     if (req.body.weightInPounds) profileFields.weightInPounds = req.body.weightInPounds;
@@ -72,9 +73,18 @@ router.post(
       } else {
         // Create
 
-        // Save Profile
-        new Profile(profileFields).save().then(profile =>
-        res.json(profile));
+        // Check if username exists
+        Profile.findOne({ username: profileFields.username
+        }).then(profile => {
+          if (profile) {
+            errors.username = 'That username already exists';
+            res.status(400).json(errors);
+          }
+
+          // Save Profile
+          new Profile(profileFields).save().then(profile =>
+          res.json(profile));
+        });
       }
     });
   }

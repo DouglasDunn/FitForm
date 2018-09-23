@@ -54,3 +54,6 @@
 # 9/23/18
 (X) Create the loading spinner feature
 (X) Set profile state to null when user logs out
+(X) Add a username to user's profile
+
+() show profile info on the goals page

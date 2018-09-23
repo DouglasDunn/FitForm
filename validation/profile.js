@@ -1,17 +1,10 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
-// gender: '',
-// age: '',
-// weightInPounds: '',
-// feet: '',
-// inches: '',
-// goalWeightInPounds: '',
-// goalDate: '',
-
 module.exports = function validateProfileInput(data) {
   let errors = {};
 
+  data.username = !isEmpty(data.username) ? data.username : '';
   data.gender = !isEmpty(data.gender) ? data.gender : '';
   data.age = !isEmpty(data.age) ? data.age : '';
   data.weightInPounds = !isEmpty(data.weightInPounds) ? data.weightInPounds : '';
@@ -19,6 +12,14 @@ module.exports = function validateProfileInput(data) {
   data.inches = !isEmpty(data.inches) ? data.inches : '';
   data.goalWeightInPounds = !isEmpty(data.goalWeightInPounds) ? data.goalWeightInPounds : '';
   data.goalDate = !isEmpty(data.goalDate) ? data.goalDate : '';
+
+  if (!Validator.isLength(data.username, { min: 2, max: 40 })) {
+    errors.username = 'Username needs to be between 2 and 40 characters';
+  }
+
+  if (Validator.isEmpty(data.username)) {
+    errors.username = 'Username is required'
+  }
 
   if (Validator.isEmpty(data.gender)) {
     errors.gender = 'Gender is required.';

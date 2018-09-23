@@ -10,6 +10,7 @@ class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: '',
       gender: '',
       age: '',
       weightInPounds: '',
@@ -34,6 +35,7 @@ class CreateProfile extends Component {
     e.preventDefault();
 
     const profileData = {
+      username: this.state.username,
       gender: this.state.gender,
       age: this.state.age,
       weightInPounds: this.state.weightInPounds,
@@ -95,6 +97,14 @@ class CreateProfile extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
+                <TextFieldGroup
+                  placeholder="* Username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.onChange}
+                  error={errors.username}
+                  info="Input in your username"
+                />
                 <SelectListGroup
                   placeholder="Gender"
                   name="gender"

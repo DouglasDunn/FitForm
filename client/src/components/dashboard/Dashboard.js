@@ -26,10 +26,11 @@ class Dashboard extends Component {
             <p className="lead text-muted">
               Welcome {user.name}
             </p>
-            <Link to="/edit-profile" className="btn btn-primary">
+            <Link to={`/profile/${profile.username}`} className="btn btn-primary">
               <i className="fas fa-watch-fitness text-info mr-1" />
               Goals
             </Link>
+            <h1>Calendar goes here</h1>
           </div>
         );
       } else {
