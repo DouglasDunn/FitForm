@@ -90,3 +90,4 @@ src/components/common/spinner.gif
                       Spinner.js
 src/reducers/profileReducer.js
 src/App.js
+src/components/layout/Navbar.js

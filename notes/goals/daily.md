@@ -53,3 +53,4 @@
 
 # 9/23/18
 (X) Create the loading spinner feature
+(X) Set profile state to null when user logs out
