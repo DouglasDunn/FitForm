@@ -47,6 +47,9 @@
 () Create the redux for create-profile
 
 # 9/22/18
-(X) Create the redux for create-profile
+(X) Create the redux for create-profile.
 (X) Create private routes for logged in users.
-() Show the user's profile in the dashboard
+() Create the loading spinner feature
+
+# 9/23/18
+(X) Create the loading spinner feature

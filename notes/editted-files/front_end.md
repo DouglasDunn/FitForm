@@ -76,3 +76,17 @@ src/components/create-profile/CreateProfile.js
 src/components/create-profile/CreateProfile.js
 src/components/common/PrivateRoute.js
 src/App.js
+src/components/dashboard/Dashboard.js
+src/actions/profileActions.js
+            types.js
+src/reducers/index.js
+             profileReducer.js
+
+# 9/23/18
+src/actions/profileActions.js
+            types.js
+src/components/dashboard/Dashboard.js
+src/components/common/spinner.gif
+                      Spinner.js
+src/reducers/profileReducer.js
+src/App.js
