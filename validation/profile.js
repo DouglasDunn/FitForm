@@ -14,11 +14,11 @@ module.exports = function validateProfileInput(data) {
   data.goalDate = !isEmpty(data.goalDate) ? data.goalDate : '';
 
   if (!Validator.isLength(data.username, { min: 2, max: 40 })) {
-    errors.username = 'Username needs to be between 2 and 40 characters';
+    errors.username = 'Username needs to be between 2 and 40 characters.';
   }
 
   if (Validator.isEmpty(data.username)) {
-    errors.username = 'Username is required'
+    errors.username = 'Username is required.'
   }
 
   if (Validator.isEmpty(data.gender)) {

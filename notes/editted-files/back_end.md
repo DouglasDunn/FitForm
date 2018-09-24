@@ -33,3 +33,8 @@ routes/api/profile.js
 models/Profile.js
 routes/api/profile.js
 validation/profile.js
+
+# 9/24/18
+models/Profile.js
+routes/api/profile.js
+validation/profile.js

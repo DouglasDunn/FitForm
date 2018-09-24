@@ -35,6 +35,29 @@ router.get(
   }
 );
 
+// @route   GET api/profile/:username
+// @desc    Get profile by handle
+// @access  Public
+
+router.get(
+  '/:username',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+  const errors = {};
+
+  Profile.findOne({ username: req.params.username })
+    .populate('user', ['name', 'avatar'])
+    .then(profile => {
+      if (!profile) {
+        errors.noprofile = 'There is no profile for this user';
+        res.status(404).json(errors);
+      }
+
+      res.json(profile);
+    })
+    .catch(err => res.status(404).json(err));
+});
+
 // @route   POST api/profile
 // @desc    Create or edit user profile
 // @access  Private
@@ -74,17 +97,16 @@ router.post(
         // Create
 
         // Check if username exists
-        Profile.findOne({ username: profileFields.username
-        }).then(profile => {
-          if (profile) {
-            errors.username = 'That username already exists';
-            res.status(400).json(errors);
-          }
+        // Profile.findOne({ username: profileFields.username }).then(profile => {
+        //   if (profile) {
+        //     errors.username = 'That username already exists';
+        //     res.status(400).json(errors);
+        //   }
 
           // Save Profile
           new Profile(profileFields).save().then(profile =>
           res.json(profile));
-        });
+        //});
       }
     });
   }

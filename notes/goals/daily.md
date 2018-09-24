@@ -56,4 +56,11 @@
 (X) Set profile state to null when user logs out
 (X) Add a username to user's profile
 
-() show profile info on the goals page
+# 9/24/18
+(X) fix the CreateProfile bug
+(X) Add a username to user's profile, configure to backend.
+(X) Add a username to user's profile, configure to frontend.
+
+# 9/25/18
+(X) Get profile by username for the back end.
+() Get profile by username for the front end.
