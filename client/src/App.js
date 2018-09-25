@@ -21,14 +21,6 @@ import Profile from './components/profile/Profile';
 
 import './App.css';
 
-// <Switch>
-//   <PrivateRoute
-//     exact
-//     path="/profile/:username"
-//     component={Profile}
-//   />
-// </Switch>
-
 // Check for token
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -73,6 +65,13 @@ class App extends Component {
                   exact
                   path="/create-profile"
                   component={CreateProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/profile/:username"
+                  component={Profile}
                 />
               </Switch>
             </div>

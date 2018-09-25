@@ -96,3 +96,7 @@ src/components/profile/Profile.js
 
 # 9/24/18
 src/components/create-profile/CreateProfile.js
+src/App.js
+src/components/profile/Profile.js
+src/components/dashboard/Dashboard.js
+src/actions/profileActions.js

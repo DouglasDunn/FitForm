@@ -63,4 +63,4 @@
 
 # 9/25/18
 (X) Get profile by username for the back end.
-() Get profile by username for the front end.
+(X) Get profile by username for the front end.
