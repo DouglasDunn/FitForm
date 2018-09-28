@@ -64,3 +64,11 @@
 # 9/25/18
 (X) Get profile by username for the back end.
 (X) Get profile by username for the front end.
+() display button to go back to dashboard, edit goal buttons, and add goal button.
+
+# 9/26/18
+() Create an add new goal button to add another goal for your profile
+
+# 9/27/18
+(X) Create an add new goal button to add another goal for your profile
+(X) revamp the welcome page

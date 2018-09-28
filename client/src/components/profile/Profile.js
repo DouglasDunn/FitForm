@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Spinner from '../common/Spinner';
-import { getProfileByUsername } from '../../actions/profileActions';
+import { getProfileByUsername, addNewProfile } from '../../actions/profileActions';
+// import { getProfileByUsername, addNewProfile } from '../../actions/profileActions';
 
 class Profile extends Component {
   componentDidMount() {
@@ -23,6 +24,9 @@ class Profile extends Component {
         <div>
           <div className="row">
             <div className="col-md-12">
+              <Link to={`/dashboard`} className="btn btn-primary">
+                Dashboard
+              </Link>
               <div className="card card-body bg-info text-white mb-3">
                 <div className="text-center">
                   <h1 className="display-4 text-center">{profile.user.name}</h1>
@@ -35,6 +39,9 @@ class Profile extends Component {
                   <p>{profile.goalDate}</p>
                 </div>
               </div>
+              <Link to={`/create-profile`} className="btn btn-primary">
+                Add Another Goal
+              </Link>
             </div>
           </div>
         </div>

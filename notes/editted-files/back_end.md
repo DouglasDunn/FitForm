@@ -38,3 +38,6 @@ validation/profile.js
 models/Profile.js
 routes/api/profile.js
 validation/profile.js
+
+# 9/27/18
+models/User.js

@@ -100,3 +100,7 @@ src/App.js
 src/components/profile/Profile.js
 src/components/dashboard/Dashboard.js
 src/actions/profileActions.js
+
+# 9/26/18
+src/components/dashboard/Dashboard.js
+src/components/layout/Landing.js
