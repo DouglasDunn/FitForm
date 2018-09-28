@@ -20,7 +20,7 @@ const ProfileSchema = new Schema({
     type: Number,
     required: true
   },
-  weightInPounds: {
+  currentWeightInPounds: {
     type: Number,
     required: true
   },
@@ -32,13 +32,17 @@ const ProfileSchema = new Schema({
     type: Number,
     required: true
   },
-  goalWeightInPounds: {
-    type: Number,
-    required: true
-  },
-  goalDate: {
+  // goalWeightInPounds: {
+  //   type: Number,
+  //   required: true
+  // },
+  // goalDate: {
+  //   type: Date,
+  //   required: true
+  // },
+  date: {
     type: Date,
-    required: true
+    default: Date.now
   }
 });
 

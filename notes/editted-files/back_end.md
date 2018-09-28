@@ -41,3 +41,7 @@ validation/profile.js
 
 # 9/27/18
 models/User.js
+models/Profile.js
+
+# 9/28/18
+models/Goal.js
