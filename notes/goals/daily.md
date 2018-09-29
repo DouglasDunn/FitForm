@@ -76,3 +76,6 @@
 # 9/28/18
 (X) Edit the database
 (X) Create a post request to add a goal.
+
+# 9/29/18
+(X) Create a route Get all goals created by this user.

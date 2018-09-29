@@ -46,3 +46,6 @@ models/Profile.js
 # 9/28/18
 models/Goal.js
 routes/api/goals.js
+
+# 9/29/18
+routes/api/goals.js
