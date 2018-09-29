@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const GoalSchema = new Schema({
-  profile: {
+  user: {
     type: Schema.Types.ObjectId,
-    ref: 'profile'
+    ref: 'user'
   },
   goalWeightInPounds: {
     type: Number,
@@ -16,14 +16,5 @@ const GoalSchema = new Schema({
     required: true
   }
 });
-
-// goalWeightInPounds: {
-//   type: Number,
-//   required: true
-// },
-// goalDate: {
-//   type: Date,
-//   required: true
-// },
 
 module.exports = Goal = mongoose.model('goal', GoalSchema);

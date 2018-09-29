@@ -71,7 +71,8 @@
 
 # 9/27/18
 (X) Create an add new goal button to add another goal for your profile
-(X) revamp the welcome page
+(X) revamp the welcome page.
 
 # 9/28/18
-() Edit the database
+(X) Edit the database
+(X) Create a post request to add a goal.
