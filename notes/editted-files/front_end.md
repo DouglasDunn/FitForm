@@ -104,3 +104,8 @@ src/actions/profileActions.js
 # 9/26/18
 src/components/dashboard/Dashboard.js
 src/components/layout/Landing.js
+src/components/auth/Register.js
+
+# 9/29/18
+src/components/auth/Register.js
+src/components/create-profile/CreateProfile.js

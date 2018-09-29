@@ -13,11 +13,9 @@ class CreateProfile extends Component {
       username: '',
       gender: '',
       age: '',
-      weightInPounds: '',
+      currentWeightInPounds: '',
       feet: '',
       inches: '',
-      goalWeightInPounds: '',
-      goalDate: '',
       errors: {}
     };
 
@@ -38,11 +36,9 @@ class CreateProfile extends Component {
       username: this.state.username,
       gender: this.state.gender,
       age: this.state.age,
-      weightInPounds: this.state.weightInPounds,
+      currentWeightInPounds: this.state.currentWeightInPounds,
       feet: this.state.feet,
-      inches: this.state.inches,
-      goalWeightInPounds: this.state.goalWeightInPounds,
-      goalDate: this.state.goalDate
+      inches: this.state.inches
     }
 
     this.props.createProfile(profileData, this.props.history);
@@ -123,12 +119,12 @@ class CreateProfile extends Component {
                   info="Input in your age"
                 />
                 <TextFieldGroup
-                  placeholder="Weight In Pounds"
-                  name="weightInPounds"
-                  value={this.state.weightInPounds}
+                  placeholder=" Current Weight In Pounds"
+                  name="currentWeightInPounds"
+                  value={this.state.currentWeightInPounds}
                   onChange={this.onChange}
-                  error={errors.weightInPounds}
-                  info="Input in your weight in pounds"
+                  error={errors.currentWeightInPounds}
+                  info="Input in your current weight in pounds"
                 />
                 <SelectListGroup
                   placeholder="Feet"
@@ -147,22 +143,6 @@ class CreateProfile extends Component {
                   options={inchesOptions}
                   error={errors.inches}
                   info="Input in your inches"
-                />
-                <TextFieldGroup
-                  placeholder="Goal Weight In Pounds"
-                  name="goalWeightInPounds"
-                  value={this.state.goalWeightInPounds}
-                  onChange={this.onChange}
-                  error={errors.goalWeightInPounds}
-                  info="Input in your goal weight in pounds"
-                />
-                <TextFieldGroup
-                  name="goalDate"
-                  type="date"
-                  value={this.state.goalDate}
-                  onChange={this.onChange}
-                  error={errors.goalDate}
-                  info="Input in your goal date"
                 />
                 <input
                   type="submit"
@@ -191,3 +171,20 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, { createProfile })(
   withRouter(CreateProfile)
 );
+
+// <TextFieldGroup
+//   placeholder="Goal Weight In Pounds"
+//   name="goalWeightInPounds"
+//   value={this.state.goalWeightInPounds}
+//   onChange={this.onChange}
+//   error={errors.goalWeightInPounds}
+//   info="Input in your goal weight in pounds"
+// />
+// <TextFieldGroup
+//   name="goalDate"
+//   type="date"
+//   value={this.state.goalDate}
+//   onChange={this.onChange}
+//   error={errors.goalDate}
+//   info="Input in your goal date"
+// />

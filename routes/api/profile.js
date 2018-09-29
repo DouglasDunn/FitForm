@@ -79,11 +79,9 @@ router.post(
     if (req.body.username) profileFields.username = req.body.username;
     if (req.body.gender) profileFields.gender = req.body.gender;
     if (req.body.age) profileFields.age = req.body.age;
-    if (req.body.weightInPounds) profileFields.weightInPounds = req.body.weightInPounds;
+    if (req.body.currentWeightInPounds) profileFields.currentWeightInPounds = req.body.currentWeightInPounds;
     if (req.body.feet) profileFields.feet = req.body.feet;
     if (req.body.inches) profileFields.inches = req.body.inches;
-    if (req.body.goalWeightInPounds) profileFields.goalWeightInPounds = req.body.goalWeightInPounds;
-    if (req.body.goalDate) profileFields.goalDate = req.body.goalDate;
 
     // Save Profile
     new Profile(profileFields).save().then(profile =>

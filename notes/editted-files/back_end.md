@@ -49,3 +49,6 @@ routes/api/goals.js
 
 # 9/29/18
 routes/api/goals.js
+           profile.js
+           users.js
+validation/profile.js

@@ -79,3 +79,4 @@
 
 # 9/29/18
 (X) Create a route Get all goals created by this user.
+(X) When user registers, redirect them to /create-profile
