@@ -80,3 +80,4 @@
 # 9/29/18
 (X) Create a route Get all goals created by this user.
 (X) When user registers, redirect them to /create-profile
+(X) On the dashboard page, create a button to view profile and create a page to show the user their profile with an edit and back to dashboard buttons

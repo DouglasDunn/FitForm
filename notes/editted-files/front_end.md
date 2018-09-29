@@ -109,3 +109,7 @@ src/components/auth/Register.js
 # 9/29/18
 src/components/auth/Register.js
 src/components/create-profile/CreateProfile.js
+src/actions/authActions.js
+src/components/layout/Navbar.js
+src/components/dashboard/Dashboard.js
+src/components/profile/Profile.js

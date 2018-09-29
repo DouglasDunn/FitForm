@@ -25,22 +25,19 @@ class Profile extends Component {
           <div className="row">
             <div className="col-md-12">
               <Link to={`/dashboard`} className="btn btn-primary">
-                Dashboard
+                Back to Dashboard
               </Link>
               <div className="card card-body bg-info text-white mb-3">
                 <div className="text-center">
                   <h1 className="display-4 text-center">{profile.user.name}</h1>
-                  <p>{profile.gender}</p>
-                  <p>{profile.age}</p>
-                  <p>{profile.weightInPounds}</p>
-                  <p>{profile.feet}</p>
-                  <p>{profile.inches}</p>
-                  <p>{profile.goalWeightInPounds}</p>
-                  <p>{profile.goalDate}</p>
+                  <p>Gender: {profile.gender}</p>
+                  <p>Age: {profile.age}</p>
+                  <p>Current Weight: {profile.currentWeightInPounds}</p>
+                  <p>Height: {profile.feet} feet {profile.inches} inches</p>
                 </div>
               </div>
               <Link to={`/create-profile`} className="btn btn-primary">
-                Add Another Goal
+                Edit Profile
               </Link>
             </div>
           </div>
