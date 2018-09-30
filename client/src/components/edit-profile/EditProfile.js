@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import SelectListGroup from '../common/SelectListGroup';
-import { createProfile, getCurrentProfile } from '../../actions/profileActions';
+import { createProfile, getCurrentProfile, clearErrors } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
 
 class EditProfile extends Component {
@@ -25,6 +25,7 @@ class EditProfile extends Component {
   }
 
   componentDidMount() {
+    this.props.clearErrors();
     this.props.getCurrentProfile();
   }
 
@@ -188,6 +189,7 @@ class EditProfile extends Component {
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
+  clearErrors: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
@@ -197,6 +199,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
+export default connect(mapStateToProps, { createProfile, getCurrentProfile, clearErrors })(
   withRouter(EditProfile)
 );

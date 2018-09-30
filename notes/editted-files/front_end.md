@@ -118,3 +118,6 @@ src/components/profile/Profile.js
 src/App.js
 src/components/edit-profile/EditProfile.js
 src/components/create-profile/CreateProfile.js
+src/actions/types.js
+            profileActions.js
+src/reducers/errorReducer.js

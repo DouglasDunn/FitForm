@@ -87,9 +87,6 @@ router.post(
       if (myProfile) {
         // Check if username exists
         Profile.findOne({ username: profileFields.username }).then(someonesProfile => {
-          console.log(myProfile);
-          console.log(someonesProfile);
-
           if (someonesProfile && someonesProfile.username !== myProfile.username) {
             errors.username = 'That username already exists';
             res.status(400).json(errors);

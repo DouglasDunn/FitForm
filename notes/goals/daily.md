@@ -84,4 +84,5 @@
 
 # 9/30/18
 (X) Create an edit profile page
-(X) Use the same route to create a profile to edit the profile, make necessary changes.  
+(X) Use the same route to create a profile to edit the profile, make necessary changes.
+() clear the errors after user submits or goes to a different page and comes back.   
