@@ -26,7 +26,7 @@ class Dashboard extends Component {
             <p className="lead text-muted">
               Welcome {user.name}
             </p>
-            <Link to={`/profile/${profile.username}`} className="btn btn-primary">
+            <Link to={`/profile`} className="btn btn-primary">
               <i className="fas fa-watch-fitness text-info mr-1" />
               Profile
             </Link>

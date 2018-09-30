@@ -113,3 +113,7 @@ src/actions/authActions.js
 src/components/layout/Navbar.js
 src/components/dashboard/Dashboard.js
 src/components/profile/Profile.js
+
+# 9/30/18
+src/App.js
+src/components/edit-profile/EditProfile.js

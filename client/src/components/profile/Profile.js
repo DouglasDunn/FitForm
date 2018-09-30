@@ -36,7 +36,7 @@ class Profile extends Component {
                   <p>Height: {profile.feet} feet {profile.inches} inches</p>
                 </div>
               </div>
-              <Link to={`/create-profile`} className="btn btn-primary">
+              <Link to={`/edit-profile`} className="btn btn-primary">
                 Edit Profile
               </Link>
             </div>

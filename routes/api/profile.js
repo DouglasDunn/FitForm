@@ -35,12 +35,12 @@ router.get(
   }
 );
 
-// @route   GET api/profile/:username
+// @route   GET api/profile
 // @desc    Get profile by handle
 // @access  Public
 
 router.get(
-  '/:username',
+  '/',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
   const errors = {};
