@@ -84,4 +84,4 @@
 
 # 9/30/18
 (X) Create an edit profile page
-() 
+(X) Use the same route to create a profile to edit the profile, make necessary changes.  

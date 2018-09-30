@@ -83,9 +83,52 @@ router.post(
     if (req.body.feet) profileFields.feet = req.body.feet;
     if (req.body.inches) profileFields.inches = req.body.inches;
 
-    // Save Profile
-    new Profile(profileFields).save().then(profile =>
-    res.json(profile));
+    Profile.findOne({ user: req.user.id }).then(myProfile => {
+      if (myProfile) {
+        // Check if username exists
+        Profile.findOne({ username: profileFields.username }).then(someonesProfile => {
+          console.log(myProfile);
+          console.log(someonesProfile);
+
+          if (someonesProfile && someonesProfile.username !== myProfile.username) {
+            errors.username = 'That username already exists';
+            res.status(400).json(errors);
+          } else {
+            // Update
+            Profile.findOneAndUpdate(
+              { user: req.user.id },
+              { $set: profileFields },
+              { new: true }
+            ).then(profile => res.json(profile));
+          }
+
+          // // Update
+          // Profile.findOneAndUpdate(
+          //   { user: req.user.id },
+          //   { $set: profileFields },
+          //   { new: true }
+          // ).then(profile => res.json(profile));
+        });
+      } else {
+        // Create
+
+        // Check if username exists
+        Profile.findOne({ username: profileFields.username }).then(profile => {
+          if (profile) {
+            errors.username = 'That username already exists';
+            res.status(400).json(errors);
+          }
+
+          // Save Profile
+          new Profile(profileFields).save().then(profile =>
+          res.json(profile));
+        });
+      }
+    });
+
+    // // Save Profile
+    // new Profile(profileFields).save().then(profile =>
+    // res.json(profile));
 
     // Profile.findOne({ user: req.user.id }).then(profile => {
     //   if (profile) {

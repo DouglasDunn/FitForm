@@ -17,19 +17,19 @@ const ProfileSchema = new Schema({
     required: true
   },
   age: {
-    type: Number,
+    type: String,
     required: true
   },
   currentWeightInPounds: {
-    type: Number,
+    type: String,
     required: true
   },
   feet: {
-    type: Number,
+    type: String,
     required: true
   },
   inches: {
-    type: Number,
+    type: String,
     required: true
   },
   date: {

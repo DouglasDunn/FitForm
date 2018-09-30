@@ -117,3 +117,4 @@ src/components/profile/Profile.js
 # 9/30/18
 src/App.js
 src/components/edit-profile/EditProfile.js
+src/components/create-profile/CreateProfile.js
