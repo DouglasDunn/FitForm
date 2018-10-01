@@ -126,4 +126,7 @@ src/components/create-goal/CreateGoal.js
 src/components/dashboard/Dashboard.js
 
 # 10/1/18
+src/App.js
 src/components/dashboard/Dashboard.js
+src/components/create-goal/CreateGoal.js
+src/actions/goalActions.js

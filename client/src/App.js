@@ -19,6 +19,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Profile from './components/profile/Profile';
+import CreateGoal from './components/create-goal/CreateGoal';
 
 import './App.css';
 
@@ -80,6 +81,13 @@ class App extends Component {
                   exact
                   path="/profile"
                   component={Profile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/create-goal"
+                  component={CreateGoal}
                 />
               </Switch>
             </div>

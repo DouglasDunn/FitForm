@@ -8,7 +8,7 @@ const GoalSchema = new Schema({
     ref: 'user'
   },
   goalWeightInPounds: {
-    type: Number,
+    type: String,
     required: true
   },
   goalDate: {

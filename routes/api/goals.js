@@ -18,8 +18,10 @@ router.post(
   '/',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
+    console.log("21");
     const { errors, isValid } = validateGoalInput(req.body);
-
+    console.log("23");
+    console.log(errors);
     // Check Validation
     if (!isValid) {
       // If any errors, send 400 with errors object

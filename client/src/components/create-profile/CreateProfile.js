@@ -43,7 +43,7 @@ class CreateProfile extends Component {
       currentWeightInPounds: this.state.currentWeightInPounds,
       feet: this.state.feet,
       inches: this.state.inches
-    }
+    };
 
     this.props.createProfile(profileData, this.props.history);
   }
@@ -165,32 +165,13 @@ class CreateProfile extends Component {
 CreateProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   clearErrors: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
   errors: state.errors
 });
 
 export default connect(mapStateToProps, { createProfile, clearErrors })(
   withRouter(CreateProfile)
 );
-
-// <TextFieldGroup
-//   placeholder="Goal Weight In Pounds"
-//   name="goalWeightInPounds"
-//   value={this.state.goalWeightInPounds}
-//   onChange={this.onChange}
-//   error={errors.goalWeightInPounds}
-//   info="Input in your goal weight in pounds"
-// />
-// <TextFieldGroup
-//   name="goalDate"
-//   type="date"
-//   value={this.state.goalDate}
-//   onChange={this.onChange}
-//   error={errors.goalDate}
-//   info="Input in your goal date"
-// />

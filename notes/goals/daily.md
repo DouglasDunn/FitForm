@@ -90,3 +90,5 @@
 
 # 10/1/18
 (X) edit the dashboard to show the page based on if the user has goals or not.
+(X) Create a create-goal form.
+() Revise how the goals are posted.
