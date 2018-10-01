@@ -2,25 +2,25 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getCurrentProfile } from '../../actions/profileActions';
+import { getGoals } from '../../actions/goalActions';
 import Spinner from '../common/Spinner';
 
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.getCurrentProfile();
+    this.props.getGoals();
   }
 
   render() {
     const { user } = this.props.auth;
-    const { profile, loading } = this.props.profile;
+    const { goals, loading } = this.props.goal;
 
     let dashboardContent;
 
-    if (profile === null || loading) {
+    if (goals === null || loading) {
       dashboardContent = <Spinner />;
     } else {
       // Check if logged in user has profile data
-      if (Object.keys(profile).length > 0) {
+      if (Object.keys(goals).length > 0) {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
@@ -30,6 +30,10 @@ class Dashboard extends Component {
               <i className="fas fa-watch-fitness text-info mr-1" />
               Profile
             </Link>
+            <Link to={`/goals`} className="btn btn-primary">
+              <i className="fas fa-watch-fitness text-info mr-1" />
+              Goals
+            </Link>
             <h1>Calendar goes here</h1>
           </div>
         );
@@ -38,9 +42,9 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+            <p>You do not have any goals yet, please add a goal</p>
+            <Link to="/create-goal" className="btn btn-lg btn-info">
+              Create a Goal
             </Link>
           </div>
         );
@@ -62,17 +66,22 @@ class Dashboard extends Component {
   }
 }
 
+// Dashboard.propTypes = {
+//   getGoals: PropTypes.func.isRequired,
+//   auth: PropTypes.object.isRequired,
+//   profile: PropTypes.object.isRequired
+// };
+
 Dashboard.propTypes = {
-  getCurrentProfile: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
+  getGoals: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  goal: state.goal,
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(
+export default connect(mapStateToProps, { getGoals })(
   Dashboard
 );

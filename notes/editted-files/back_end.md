@@ -55,4 +55,12 @@ validation/profile.js
 
 # 9/30/18
 routes/api/profile.js
+           goals.js
 models/Profile.js
+src/reducers/index.js
+             goalReducer.js
+src/actions/goalActions.js
+
+# 10/1/18
+routes/api/profile.js
+           goals.js

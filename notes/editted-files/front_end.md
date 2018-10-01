@@ -121,3 +121,9 @@ src/components/create-profile/CreateProfile.js
 src/actions/types.js
             profileActions.js
 src/reducers/errorReducer.js
+             index.js
+src/components/create-goal/CreateGoal.js
+src/components/dashboard/Dashboard.js
+
+# 10/1/18
+src/components/dashboard/Dashboard.js

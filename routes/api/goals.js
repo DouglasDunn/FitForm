@@ -40,7 +40,7 @@ router.post(
 // @desc    Create goal
 // @access  Private
 router.get(
-  '/:username',
+  '/',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const errors = {};
@@ -51,10 +51,7 @@ router.get(
           errors.nogoals = 'There are no goals for this user';
           return res.status(404).json(errors);
         }
-        res.json({
-          profile,
-          goals
-        });
+        res.json(goals);
       })
       .catch(err => res.status(404).json(err));
     })

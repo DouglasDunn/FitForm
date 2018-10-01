@@ -89,7 +89,7 @@ router.post(
         Profile.findOne({ username: profileFields.username }).then(someonesProfile => {
           if (someonesProfile && someonesProfile.username !== myProfile.username) {
             errors.username = 'That username already exists';
-            res.status(400).json(errors);
+            return res.status(400).json(errors);
           } else {
             // Update
             Profile.findOneAndUpdate(
@@ -113,7 +113,7 @@ router.post(
         Profile.findOne({ username: profileFields.username }).then(profile => {
           if (profile) {
             errors.username = 'That username already exists';
-            res.status(400).json(errors);
+            return res.status(400).json(errors);
           }
 
           // Save Profile
