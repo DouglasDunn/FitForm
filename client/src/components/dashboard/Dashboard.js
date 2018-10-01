@@ -43,7 +43,7 @@ class Dashboard extends Component {
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
             <p>You do not have any goals yet, please add a goal</p>
-            <Link to="/create-goal" className="btn btn-lg btn-info">
+            <Link to="/add-goal" className="btn btn-lg btn-info">
               Create a Goal
             </Link>
           </div>

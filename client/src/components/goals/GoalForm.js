@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
-import { createGoal, clearErrors } from '../../actions/goalActions';
+import { addGoal, clearErrors } from '../../actions/goalActions';
 
-class CreateGoal extends Component {
+class GoalForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,12 +31,12 @@ class CreateGoal extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const goalData = {
+    const newGoal = {
       goalWeightInPounds: this.state.goalWeightInPounds,
       goalDate: this.state.goalDate
     };
 
-    this.props.createGoal(goalData, this.props.history);
+    this.props.addGoal(newGoal, this.props.history);
   }
 
   onChange(e) {
@@ -45,7 +45,6 @@ class CreateGoal extends Component {
 
   render() {
     const { errors } = this.state;
-    console.log(errors);
 
     return (
       <div className="create-goal">
@@ -84,8 +83,8 @@ class CreateGoal extends Component {
   }
 }
 
-CreateGoal.propTypes = {
-  createGoal: PropTypes.func.isRequired,
+GoalForm.propTypes = {
+  addGoal: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired
 };
 
@@ -93,6 +92,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { createGoal })(
-  withRouter(CreateGoal)
+export default connect(mapStateToProps, { addGoal })(
+  withRouter(GoalForm)
 );

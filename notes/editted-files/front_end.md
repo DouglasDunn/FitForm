@@ -130,3 +130,5 @@ src/App.js
 src/components/dashboard/Dashboard.js
 src/components/create-goal/CreateGoal.js
 src/actions/goalActions.js
+            types.js
+src/reducers/goalReducer.js

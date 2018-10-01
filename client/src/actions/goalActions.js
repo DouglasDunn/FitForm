@@ -3,6 +3,7 @@ import axios from 'axios';
 import {
   GET_GOALS,
   GOAL_LOADING,
+  ADD_GOAL,
   GET_ERRORS
 } from './types';
 
@@ -26,11 +27,16 @@ export const getGoals = () => dispatch => {
 };
 
 // Create Goal
-export const createGoal = (goalData, history) => dispatch => {
+export const addGoal = (goalData, history) => dispatch => {
   // dispatch(clearErrors());
-  console.log("31");
   axios
     .post('/api/goals', goalData)
+    .then(res =>
+      dispatch({
+        type: ADD_GOAL,
+        payload: res.data
+      })
+    )
     .then(res => history.push('/dashboard'))
     .catch(err =>
       dispatch({
