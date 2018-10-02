@@ -58,6 +58,10 @@ p {
   color: white;
 }
 
+.my-goals p {
+  color: black;
+}
+
 .loginParagraph {
   margin-top: 20px;
 }

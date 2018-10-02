@@ -30,7 +30,7 @@ class Dashboard extends Component {
               <i className="fas fa-watch-fitness text-info mr-1" />
               Profile
             </Link>
-            <Link to={`/goals`} className="btn btn-primary">
+            <Link to={`/my-goals`} className="btn btn-primary">
               <i className="fas fa-watch-fitness text-info mr-1" />
               Goals
             </Link>

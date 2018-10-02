@@ -19,20 +19,22 @@ router.post(
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const { errors, isValid } = validateGoalInput(req.body);
-    
+
     // Check Validation
     if (!isValid) {
       // If any errors, send 400 with errors object
       return res.status(400).json(errors);
     }
-
-    const newGoal = new Goal({
-      goalWeightInPounds: req.body.goalWeightInPounds,
-      goalDate: req.body.goalDate,
-      user: req.user.id
-    });
-
-    newGoal.save().then(goal => res.json(goal));
+    Profile.findOne({ user: req.user.id }).then(profile => {
+      const newGoal = new Goal({
+        currentWeightInPounds: profile.currentWeightInPounds,
+        goalWeightInPounds: req.body.goalWeightInPounds,
+        goalDate: req.body.goalDate,
+        user: req.user.id
+      });
+      newGoal.save().then(goal => res.json(goal));
+    })
+    .catch(err => res.status(404).json(err));
   }
 );
 
@@ -45,15 +47,12 @@ router.get(
   (req, res) => {
     const errors = {};
 
-    Profile.findOne({ user: req.user.id }).then(profile => {
-      Goal.find({ user: profile.user }).then(goals => {
-        if (!goals) {
-          errors.nogoals = 'There are no goals for this user';
-          return res.status(404).json(errors);
-        }
-        res.json(goals);
-      })
-      .catch(err => res.status(404).json(err));
+    Goal.find({ user: req.user.id }).then(goals => {
+      if (!goals) {
+        errors.nogoals = 'There are no goals for this user';
+        return res.status(404).json(errors);
+      }
+      res.json(goals);
     })
     .catch(err => res.status(404).json(err));
   }

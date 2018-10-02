@@ -20,6 +20,7 @@ import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import Profile from './components/profile/Profile';
 import GoalForm from './components/goals/GoalForm';
+import MyGoals from './components/goals/MyGoals';
 
 import './App.css';
 
@@ -88,6 +89,13 @@ class App extends Component {
                   exact
                   path="/add-goal"
                   component={GoalForm}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/my-goals"
+                  component={MyGoals}
                 />
               </Switch>
             </div>

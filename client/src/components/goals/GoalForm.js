@@ -47,7 +47,7 @@ class GoalForm extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="create-goal">
+      <div className="goal-form">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">

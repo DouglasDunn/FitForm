@@ -92,3 +92,7 @@
 (X) edit the dashboard to show the page based on if the user has goals or not.
 (X) Create a create-goal form.
 (X) Revise how the goals are posted.
+() Show all current user's goals on the goal page.
+
+# 10/2/18
+() Show all current user's goals on the goal page.

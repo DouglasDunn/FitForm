@@ -7,6 +7,10 @@ const GoalSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'user'
   },
+  currentWeightInPounds: {
+    type: String,
+    required: true
+  },
   goalWeightInPounds: {
     type: String,
     required: true

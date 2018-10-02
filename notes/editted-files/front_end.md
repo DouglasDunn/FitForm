@@ -127,8 +127,18 @@ src/components/dashboard/Dashboard.js
 
 # 10/1/18
 src/App.js
+    App.css
 src/components/dashboard/Dashboard.js
 src/components/create-goal/CreateGoal.js
+src/components/goals/Goal.js
+                     GoalForm.js
+                     MyGoals.js
+                     Goals.js
 src/actions/goalActions.js
             types.js
 src/reducers/goalReducer.js
+
+# 10/2/18
+src/components/goals/Goal.js
+                     MyGoals.js
+                     Goals.js

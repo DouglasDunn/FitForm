@@ -65,3 +65,7 @@ src/actions/goalActions.js
 routes/api/profile.js
            goals.js
 models/Goal.js
+
+# 10/2/18
+routes/api/goals.js
+models/Goal.js
