@@ -21,6 +21,7 @@ import EditProfile from './components/edit-profile/EditProfile';
 import Profile from './components/profile/Profile';
 import GoalForm from './components/goals/GoalForm';
 import MyGoals from './components/goals/MyGoals';
+import EditGoal from './components/edit-goal/EditGoal.js';
 
 import './App.css';
 
@@ -96,6 +97,13 @@ class App extends Component {
                   exact
                   path="/my-goals"
                   component={MyGoals}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/edit-goal/:id"
+                  component={EditGoal}
                 />
               </Switch>
             </div>

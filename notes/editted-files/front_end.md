@@ -142,3 +142,16 @@ src/reducers/goalReducer.js
 src/components/goals/Goal.js
                      MyGoals.js
                      Goals.js
+
+# 10/3/18
+src/components/edit-goal/EditGoal.js
+src/actions/goalActions.js
+            types.js
+
+# 10/4/18
+src/components/edit-goal/EditGoal.js
+src/actions/goalActions.js
+src/App.js
+
+# 10/5/18
+src/components/edit-goal/EditGoal.js

@@ -5,5 +5,6 @@ export const GET_PROFILE = 'GET_PROFILE';
 export const PROFILE_LOADING = 'PROFILE_LOADING';
 export const CLEAR_CURRENT_PROFILE = 'CLEAR_CURRENT_PROFILE';
 export const GET_GOALS = 'GET_GOALS';
+export const GET_GOAL = 'GET_GOAL';
 export const GOAL_LOADING = 'GOAL_LOADING';
 export const ADD_GOAL = 'ADD_GOAL';

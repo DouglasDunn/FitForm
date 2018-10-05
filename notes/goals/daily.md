@@ -95,4 +95,15 @@
 () Show all current user's goals on the goal page.
 
 # 10/2/18
-() Show all current user's goals on the goal page.
+(X) Show all current user's goals on the goal page.
+() Create the edit form to edit a goal.
+
+# 10/3/18
+() Create the edit form to edit a goal.
+
+# 10/4/18
+() Create the edit form to edit a goal.
+
+# 10/5/18
+(X) Create the edit form to edit a goal.
+() Highlight the current goals you are trying to accomplish and fix the date format.

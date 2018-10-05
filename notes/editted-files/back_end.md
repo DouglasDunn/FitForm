@@ -69,3 +69,12 @@ models/Goal.js
 # 10/2/18
 routes/api/goals.js
 models/Goal.js
+
+# 10/3/18
+routes/api/goals.js
+
+# 10/4/18
+routes/api/goals.js
+
+# 10/5/18
+routes/api/goals.js
