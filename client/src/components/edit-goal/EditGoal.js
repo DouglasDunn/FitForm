@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import { editGoal, getGoal, clearErrors } from '../../actions/goalActions';
 import isEmpty from '../../validation/is-empty';
+import moment from 'moment';
 
 class GoalForm extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class GoalForm extends Component {
       // If goal field doesn't exist, make empty string
       goal.goalWeightInPounds = !isEmpty(goal.goalWeightInPounds) ? goal.goalWeightInPounds : '';
       goal.goalDate = !isEmpty(goal.goalDate) ? goal.goalDate : '';
-      
+
       // Set component fields state
       this.setState({
         goalWeightInPounds: goal.goalWeightInPounds,
@@ -85,7 +86,7 @@ class GoalForm extends Component {
                 <TextFieldGroup
                   name="goalDate"
                   type="date"
-                  value={this.state.goalDate}
+                  value={moment(this.state.goalDate).format().substring(0, 10)}
                   onChange={this.onChange}
                   error={errors.goalDate}
                   info="Input in your goal date"

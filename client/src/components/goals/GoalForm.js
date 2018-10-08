@@ -11,6 +11,7 @@ class GoalForm extends Component {
     this.state = {
       goalWeightInPounds: '',
       goalDate: '',
+      goalTimeline: '',
       errors: {}
     };
 

@@ -18,6 +18,14 @@ const GoalSchema = new Schema({
   goalDate: {
     type: Date,
     required: true
+  },
+  goalTimeline: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 

@@ -4,15 +4,24 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGoals } from '../../actions/goalActions';
 import Spinner from '../common/Spinner';
+import Calendar from './Calendar';
 
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getGoals();
   }
 
+  onDayClick = (e, day) => {
+    alert(day);
+  }
+
   render() {
     const { user } = this.props.auth;
     const { goals, loading } = this.props.goal;
+    const style = {
+      position: "relative",
+      margin: "50px auto"
+    };
 
     let dashboardContent;
 
@@ -34,7 +43,7 @@ class Dashboard extends Component {
               <i className="fas fa-watch-fitness text-info mr-1" />
               Goals
             </Link>
-            <h1>Calendar goes here</h1>
+            <Calendar style={style} width="302px" onDayClick={(e, day) => this.onDayClick(e, day)} />
           </div>
         );
       } else {

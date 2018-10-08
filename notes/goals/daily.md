@@ -107,3 +107,6 @@
 # 10/5/18
 (X) Create the edit form to edit a goal.
 () Highlight the current goals you are trying to accomplish and fix the date format.
+
+# 10/8/18
+(X) Create a calendar for the dashboard.

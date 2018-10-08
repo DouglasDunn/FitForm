@@ -31,6 +31,7 @@ router.post(
         currentWeightInPounds: profile.currentWeightInPounds,
         goalWeightInPounds: req.body.goalWeightInPounds,
         goalDate: req.body.goalDate,
+        goalTimeline: 'current',
         user: req.user.id
       });
       newGoal.save().then(goal => res.json(goal));
