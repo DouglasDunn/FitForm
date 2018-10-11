@@ -9,4 +9,4 @@ export const GET_GOAL = 'GET_GOAL';
 export const GOAL_LOADING = 'GOAL_LOADING';
 export const ADD_GOAL = 'ADD_GOAL';
 export const DAILY_PROGRESS_LOADING = 'DAILY_PROGRESS_LOADING';
-export const SET_DATE_FOR_FORM = 'SET_DATE_FOR_FORM';
+export const ADD_DAILY_PROGRESS = 'ADD_DAILY_PROGRESS';

@@ -117,4 +117,4 @@
 # 10/10/18
 (X) Create a form for each calendar date.
 (X) Create the backend for daily progress.
-() Complete the front end for daily progress
+(X) Complete the front end for daily progress

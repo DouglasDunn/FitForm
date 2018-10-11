@@ -172,3 +172,6 @@ src/reducers/index.js
 src/App.js
 src/components/daily-progress/DailyProgressForm.js
 src/components/dashboard/Calendar.js
+src/actions/dailyProgressActions.js
+            types.js
+src/reducers/dailyProgressReducer.js
