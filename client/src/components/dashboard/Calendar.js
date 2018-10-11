@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+// import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 import moment from 'moment';
+// import { getDailyProgressForm } from '../../actions/dailyProgressActions';
 
-class Goal extends Component {
+class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -169,8 +173,19 @@ class Goal extends Component {
     }, () => {
       console.log("SELECTED DAY: ", this.state.selectedDay);
     });
+    // let monthInNumFormat = this.months.indexOf(this.month()) + 1;
+    if (day.toString().length === 1) {
+      day = "0" + day;
+    }
+    let dateClickedOn = this.month() + " " + day + ", " + this.year();
+    this.props.onDayClick && this.props.onDayClick(e, day, this.state.today.format("MMMM DD, YYYY"), dateClickedOn);
 
-    this.props.onDayClick && this.props.onDayClick(e, day);
+    this.props.history.push('/add-daily-progress', { dateClickedOn });
+    // <Redirect to="/hi">
+    // this.props.getDailyProgressForm(dateClickedOn);
+    // console.log("test");
+    // console.log(this.month(), + day + ",", this.year());
+    // console.log(this.state.today.format("MMMM D, YYYY"));
   }
 
   render() {
@@ -259,4 +274,8 @@ class Goal extends Component {
   }
 }
 
-export default Goal;
+// Calendar.propTypes = {
+//   getDailyProgressForm: PropTypes.func.isRequired
+// };
+
+export default withRouter(Calendar);

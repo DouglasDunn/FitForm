@@ -26,6 +26,9 @@ class MyGoals extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
+              <Link to={`/dashboard`} className="btn btn-primary">
+                Back to Dashboard
+              </Link>
               <h1>My Goals</h1>
               {goalContent}
               <Link to="/add-goal" className="btn btn-lg btn-info">

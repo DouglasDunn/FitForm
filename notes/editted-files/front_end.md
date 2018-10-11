@@ -155,3 +155,20 @@ src/App.js
 
 # 10/5/18
 src/components/edit-goal/EditGoal.js
+
+# 10/8/18
+src/App.css
+src/components/dashboard/Calendar.js
+                         Dashboard.js
+
+# 10/9/18
+src/components/dashboard/Calendar.js
+src/actions/dailyProgressActions.js
+            types.js
+src/reducers/index.js
+             dailyProgressReducer.js
+
+# 10/10/18
+src/App.js
+src/components/daily-progress/DailyProgressForm.js
+src/components/dashboard/Calendar.js

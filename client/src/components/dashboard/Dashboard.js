@@ -11,8 +11,18 @@ class Dashboard extends Component {
     this.props.getGoals();
   }
 
-  onDayClick = (e, day) => {
+  onDayClick = (e, day, today, dayClickedOn) => {
     alert(day);
+
+    console.log("today: ", today)
+    console.log("clicked on: ", dayClickedOn);
+    if (today === dayClickedOn) {
+      console.log("equal");
+    } else if (today < dayClickedOn) {
+      console.log("dayClickedOn is greater");
+    } else if (today > dayClickedOn) {
+      console.log("today is greater");
+    }
   }
 
   render() {
@@ -43,7 +53,7 @@ class Dashboard extends Component {
               <i className="fas fa-watch-fitness text-info mr-1" />
               Goals
             </Link>
-            <Calendar style={style} width="302px" onDayClick={(e, day) => this.onDayClick(e, day)} />
+            <Calendar style={style} width="302px" onDayClick={(e, day, today, dayClickedOn) => this.onDayClick(e, day, today, dayClickedOn)} />
           </div>
         );
       } else {

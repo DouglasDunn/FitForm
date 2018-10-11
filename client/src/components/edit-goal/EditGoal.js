@@ -7,7 +7,7 @@ import { editGoal, getGoal, clearErrors } from '../../actions/goalActions';
 import isEmpty from '../../validation/is-empty';
 import moment from 'moment';
 
-class GoalForm extends Component {
+class EditGoal extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -105,7 +105,7 @@ class GoalForm extends Component {
   }
 }
 
-GoalForm.propTypes = {
+EditGoal.propTypes = {
   editGoal: PropTypes.func.isRequired,
   getGoal: PropTypes.func.isRequired,
   goal: PropTypes.object.isRequired,
@@ -118,5 +118,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { editGoal, getGoal })(
-  withRouter(GoalForm)
+  withRouter(EditGoal)
 );

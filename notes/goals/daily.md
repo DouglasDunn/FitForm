@@ -110,3 +110,10 @@
 
 # 10/8/18
 (X) Create a calendar for the dashboard.
+
+# 10/9/18
+() Create a form for each calendar date.
+
+# 10/10/18
+(X) Create a form for each calendar date.
+() Create the backend for daily progress.

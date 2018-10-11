@@ -79,3 +79,7 @@ routes/api/goals.js
 # 10/5/18
 routes/api/goals.js
 models/Goal.js
+
+# 10/9/18
+routes/api/dailyProgress.js
+models/DailyProgress.js
