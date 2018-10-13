@@ -51,3 +51,5 @@ entry point: server.js
 9. In server.js, create server static assets if in production.
 10. In package.json, create the heroku-postbuild script.
 11. Commit project to github.
+12. Run git push heroku master
+13. Run heroku open to open the website.
