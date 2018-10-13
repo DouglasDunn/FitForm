@@ -118,3 +118,4 @@
 (X) Create a form for each calendar date.
 (X) Create the backend for daily progress.
 (X) Complete the front end for daily progress
+() deploy app to heroku.

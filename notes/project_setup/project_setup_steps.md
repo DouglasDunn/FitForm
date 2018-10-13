@@ -38,3 +38,16 @@ entry point: server.js
 4. Go to boostrap, get the css cdn, and in client/public/index.html in the head tag, replace the Notice comment with the cdn.
 5. Also, get the 3 JavaScript script tags and replace the This HTML comment with the script tags at the end of the body tag.
 6. Go to font awesome, select the svg and js tab, and put the script tag under the bootstrap link tag in head.
+
+# Heroku
+1. Create a config/keys_dev.js file and copy the contents of keys.js and paste it into keys_dev.js.
+2. In the .gitignore, add /config/keys_dev.js
+3. Create a config/keys_prod.js
+4. In config/keys.js, create an if condition, depending if you're in production mode or development mode.
+5. login to heroku through the terminal using the command heroku login
+6. run heroku create in the terminal to create a heroku app
+7. In heroku, go to settings, reveal config vars, and add the config environment variables.
+8. Deploy your app to heroku by going to the deploy tab, and running the command like this one for example: heroku git:remote -a intense-sands-24859
+9. In server.js, create server static assets if in production.
+10. In package.json, create the heroku-postbuild script.
+11. Commit project to github.
