@@ -39,7 +39,7 @@ app.use('/api/goals', goals);
 app.use('/api/daily-progress', dailyProgress);
 
 // Server static assets if in production
-if (process.env.NODE_ENV === 'productionx') {
+if (1) {
   // Set static folder
   app.use(express.static('client/build'));
 
