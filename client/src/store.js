@@ -6,19 +6,14 @@ const initialState = {};
 
 const middleware = [thunk];
 
-const whichCompose = () => {
-  if (window.navigator.userAgent.includes("Chrome")) {
-    compose(
-      applyMiddleware(...middleware),
-      // Implements the Chrome redux tools extension
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__()
-    );
-  } else {
-    compose(applyMiddleware(...middleware));
-  }
-};
-
-const store = createStore(reducers, {}, whichCompose());
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  rootReducer,
+  initialState,
+  composeEnhancers(
+    applyMiddleware(...middleware),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
 
 export default store;
